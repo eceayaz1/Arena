@@ -1,0 +1,298 @@
+/* swiper */
+#main-slider .swiper-container {
+    padding: 0;
+    height: 790px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #main-slider .swiper-container {
+        height: 500px;
+    }
+}
+
+#main-slider .swiper-slide {
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* swiper arrows */
+#main-slider .swiper-button-prev,
+#main-slider .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-slider .swiper-button-prev {
+    left: 30px;
+}
+
+#main-slider .swiper-button-next {
+    right: 30px;
+}
+
+    #main-slider .swiper-button-prev span,
+    #main-slider .swiper-button-next span {
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        position: absolute;
+        border: solid 2px white;
+        border-left: 0;
+        border-bottom: 0;
+        transition: all 0.3s ease;
+    }
+
+#main-slider .swiper-button-prev span {
+    transform: rotate(-135deg);
+    left: 50%;
+}
+
+#main-slider .swiper-button-next span {
+    transform: rotate(45deg);
+    right: 50%;
+}
+
+    #main-slider .swiper-button-prev span:after,
+    #main-slider .swiper-button-next span:after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 0px;
+        height: 2px;
+        transition: all 0.3s ease;
+        transform: rotate(-45deg);
+    }
+
+#main-slider .swiper-button-prev:hover span {
+    left: 30%;
+}
+
+#main-slider .swiper-button-next:hover span {
+    right: 30%;
+}
+
+    #main-slider .swiper-button-prev:hover span:after,
+    #main-slider .swiper-button-next:hover span:after {
+        width: calc(20px - 4px);
+    }
+#main-slider .slide-text h1 {
+    font-size: 98px;
+    font-weight: bold;
+}
+#main-slider .slide-text p {
+    font-size: 33px;
+}
+/* swiper arrows mobile */
+@media screen and (max-width: 991px) {
+    #main-slider .swiper-button-next, #main-slider .swiper-button-prev {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    #main-slider .swiper-button-prev {
+        left: 0px;
+    }
+
+    #main-slider .swiper-button-next {
+        right: 0px;
+    }
+
+    #main-slider .swiper-button-prev:hover span {
+        left: 50%;
+    }
+
+    #main-slider .swiper-button-next:hover span {
+        right: 50%;
+    }
+
+        #main-slider .swiper-button-prev:hover span:after,
+        #main-slider .swiper-button-next:hover span:after {
+            display: none;
+        }
+}
+/* swiper pagination */
+#main-slider .swiper-pagination {
+    height: 40px;
+}
+
+#main-slider .swiper-pagination-bullet {
+    background-color: transparent;
+    border: solid 1px white;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+    #main-slider .swiper-pagination-bullet:hover {
+        background-color: white;
+    }
+
+#main-slider .swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    left: 0;
+    background-color: transparent;
+    border: solid 1px white;
+}
+
+/* text content */
+#main-slider .slide-text {
+    text-align: left;
+    color: white;
+    opacity: 1;
+    z-index: 2;
+    width: 80%;
+    max-width: 1140px;
+}
+
+
+
+/* text mobile */
+@media screen and (max-width: 768px) {
+    #main-slider .slide-text {
+        width: 60%;
+    }
+
+        #main-slider .slide-text h1 {
+            font-size: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        #main-slider .slide-text p {
+            font-size: 14px;
+        }
+}
+/* button */
+#main-slider .slide-text .btn {
+    background-color: transparent;
+    font-weight: bold;
+    padding: 15px 45px;
+    min-width: 100px;
+    width: fit-content;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    position: relative;
+    border-radius: 80px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 20px;
+}
+    #main-slider .slide-text .btn:hover {
+        background: white;
+        border: 1px solid #8d488f;
+        color: #8d488f;
+    }
+    #main-slider .slide-text .btn:after {
+        content: "";
+        background: linear-gradient(90deg, rgba(141,72,143,1) 17%, rgba(178,68,118,1) 48%, rgba(210,87,84,1) 65%, rgba(229,115,57,1) 87%);
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        top: 0px;
+        border-radius: inherit;
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+    }
+
+
+
+@media screen and (max-width: 1400px) {
+    #main-slider .slide-text h1 {
+        font-size: 68px;
+    }
+    #main-slider .slide-text p {
+        font-size: 23px;
+    }
+    #main-slider .swiper-container {
+        height: 690px;
+    }
+    #main-slider .slide-text .btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-slider .slide-text h1 {
+        font-size: 50px;
+    }
+    #main-slider .slide-text p {
+        font-size: 15px;
+    }
+    #main-slider .slide-text .btn {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #main-slider .slide-text h1 {
+        font-size: 30px;
+    }
+
+    #main-slider .slide-text p {
+        font-size: 12px;
+    }
+
+    #main-slider .slide-text .btn {
+        font-size: 10px;
+    }
+    #main-slider div#navbarSupportedContent {
+        padding-top: 20px;
+    }
+    #main-slider .swiper-container {
+        height: 490px;
+    }
+}
+#main-slider  button:focus {
+    outline: 0;
+}
+
+
+#main-slider .swiper-button-next, .swiper-button-prev {
+    background-image: none !important;
+    outline:none;
+    border:0;
+}
+
+#main-slider .swiper-button-next {
+    right: 100px !important;
+    outline:0;
+}
+
+
+#main-slider .swiper-button-prev {
+    left: 100px !important;
+    outline: 0;
+}
+
+    #main-slider .swiper-button-prev:after, #main-slider .swiper-button-next:after {
+        opacity: 0;
+        outline: none;
+        border: 0;
+    }
+
+.swiper-button-next:focus {
+    outline: none; /* Klavye odaklandýðýnda çizgiyi kaldýrýr */
+    box-shadow: none; /* Gölgelendirme efektini kaldýrýr */
+    /* Diðer olasý yanýp sönen efektleri kaldýrabilirsiniz */
+    border:0;
+}
